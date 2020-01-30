@@ -14,4 +14,7 @@ public class HeaderPage extends BasePage {
         driver.findElement(TotalPriceLocator).click();
         return  new CartPage(driver);
     }
+
+
+
 }

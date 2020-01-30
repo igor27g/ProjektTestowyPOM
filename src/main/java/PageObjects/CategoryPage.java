@@ -5,8 +5,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class CategoryPage extends BasePage{
     private WebDriverWait wait;
+    public DemoFooterPage demoNotice;
+
     public CategoryPage(WebDriver driver) {
         super(driver);
+        demoNotice = new DemoFooterPage(driver);
         wait = new WebDriverWait(driver, 5);
     }
     private By viewCartButtonLocator = By.cssSelector(".added_to_cart");

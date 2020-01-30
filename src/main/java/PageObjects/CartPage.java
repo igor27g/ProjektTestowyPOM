@@ -5,8 +5,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class CartPage extends BasePage{
 
+    public DemoFooterPage footer;
+
     public CartPage(WebDriver driver) {
         super(driver);
+        footer = new DemoFooterPage(driver);
     }
 
     private By shopTableLocator = By.cssSelector(".shop_table");

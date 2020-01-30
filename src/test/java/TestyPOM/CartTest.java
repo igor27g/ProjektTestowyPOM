@@ -18,7 +18,7 @@ public class CartTest extends BaseTest {
     @Test
     public void addToCartFromProductPageTest() {
         ProductPage productPage = new ProductPage(driver).goTo(productUrl);
-        productPage.closeDemoNotice();
+        productPage.demoNotice.close();
         boolean isProductInCart = productPage.addToCart().viewCart().isProductInCart(productId);
         assertTrue(isProductInCart,
                 "Remove button was not found for a product with id=" + productId + ". " +
@@ -28,7 +28,7 @@ public class CartTest extends BaseTest {
     @Test
     public void addToCartFromCategoryPageTest() {
         CategoryPage categoryPage = new CategoryPage(driver).goTo(categoryURL);
-        categoryPage.closeDemoNotice();
+        categoryPage.demoNotice.close();
         boolean isProductInCart = categoryPage.addToCart(productId).viewCart().isProductInCart(productId);
 
         assertTrue(isProductInCart,
@@ -39,7 +39,7 @@ public class CartTest extends BaseTest {
     @Test
     public void addOneProductTenTimesTest() {
         ProductPage productPage = new ProductPage(driver).goTo(productUrl);
-        productPage.closeDemoNotice();
+        productPage.demoNotice.close();
         int productQuantity = productPage.addToCart(10).viewCart().getProductQuantity();
 
         assertEquals(10, productQuantity,
@@ -49,6 +49,7 @@ public class CartTest extends BaseTest {
     @Test
     public void addTenProductsToCartTest() {
         ProductPage productPage = new ProductPage(driver);
+        productPage.demoNotice.close();
         for(String product : productPages) {
             productPage.goTo("https://fakestore.testelka.pl/product" + product).addToCart();
         }

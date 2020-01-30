@@ -28,12 +28,12 @@ public class CartTests extends BaseTest {
 //                        "Was the product added to cart?");
 //    }
 
-    @Test
-    public void addOneProductTenTimesTest(){
-        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
-        productPage.closeDemoNotice();
-        int productQuantity = productPage.addToCart(10).viewCart().getProductQuantity();
-        assertEquals(10, productQuantity,
-                "Quantity of the product is not what expected. Expected: 10, but was " + productQuantity);
-    }
+//    @Test
+//    public void addOneProductTenTimesTest(){
+//        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+//        productPage.closeDemoNotice.close;
+//        int productQuantity = productPage.addToCart(10).viewCart().getProductQuantity();
+//        assertEquals(10, productQuantity,
+//                "Quantity of the product is not what expected. Expected: 10, but was " + productQuantity);
+//    }
 }

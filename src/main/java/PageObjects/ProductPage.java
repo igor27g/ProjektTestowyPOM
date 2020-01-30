@@ -9,11 +9,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ProductPage extends BasePage{
 
     public HeaderPage header;
+    public DemoFooterPage demoNotice;
     private WebDriverWait wait;
 
     public ProductPage(WebDriver driver) {
         super(driver);
         header = new HeaderPage(driver);
+        demoNotice = new DemoFooterPage(driver);
         wait = new WebDriverWait(driver, 7);
     }
 
@@ -28,7 +30,8 @@ public class ProductPage extends BasePage{
 
     public ProductPage addToCart() {
         WebElement addButton = driver.findElement(addToCartButtonLocator);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addButton);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].s" +
+                "crollIntoView(true);", addButton);
         addButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(viewCartButtonLocator));
         return new ProductPage(driver);
