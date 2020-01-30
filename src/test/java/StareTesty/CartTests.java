@@ -8,25 +8,25 @@ public class CartTests extends BaseTest {
     String productId = "386";
     String productUrl = "https://fakestore.testelka.pl/product/egipt-el-gouna/";
     String categoryURL = "https://fakestore.testelka.pl/product-category/windsurfing/";
-    @Test
-    public void addToCartFromProductPageTest(){
-        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
-        productPage.closeDemoNotice();
-        int productAmount = productPage.addToCart().viewCart().getProductsAmount(productId);
-        assertTrue(productAmount==1,
-                "Remove button was not found for a product with id=386 (Egipt - El Gouna). " +
-                        "Was the product added to cart?");
-    }
-
-    @Test
-    public void addToCartFromCategoryPageTest(){
-        CategoryPage categoryPage = new CategoryPage(driver).goTo(categoryURL);
-        categoryPage.closeDemoNotice();
-        int productAmount = categoryPage.addToCart(productId).viewCart().getProductsAmount(productId);
-        assertTrue(productAmount==1,
-                "Remove button was not found for a product with id=386 (Egipt - El Gouna). " +
-                        "Was the product added to cart?");
-    }
+//    @Test
+//    public void addToCartFromProductPageTest(){
+//        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+//        productPage.closeDemoNotice();
+//        int productAmount = productPage.addToCart().viewCart().getProductsAmount(productId);
+//        assertTrue(productAmount==1,
+//                "Remove button was not found for a product with id=386 (Egipt - El Gouna). " +
+//                        "Was the product added to cart?");
+//    }
+//
+//    @Test
+//    public void addToCartFromCategoryPageTest(){
+//        CategoryPage categoryPage = new CategoryPage(driver).goTo(categoryURL);
+//        categoryPage.closeDemoNotice();
+//        int productAmount = categoryPage.addToCart(productId).viewCart().getProductsAmount(productId);
+//        assertTrue(productAmount==1,
+//                "Remove button was not found for a product with id=386 (Egipt - El Gouna). " +
+//                        "Was the product added to cart?");
+//    }
 
     @Test
     public void addOneProductTenTimesTest(){
