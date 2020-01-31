@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-public class CartTest extends BaseTest {
+public class CartTests extends BaseTest {
     String productId = "386";
     String productUrl = "https://fakestore.testelka.pl/product/egipt-el-gouna/";
     String categoryURL = "https://fakestore.testelka.pl/product-category/windsurfing/";
@@ -75,12 +75,24 @@ public class CartTest extends BaseTest {
         ProductPage productPage = new ProductPage(driver).goTo(productUrl);
         productPage.demoNotice.close();
         boolean isCarEmpty = productPage.addToCart().viewCart().removeProduct(productId).isCartEmpty();
-
         assertTrue(isCarEmpty,
                 "Cart is not empty after removing the product");
     }
 
 
+
+//    @Test
+//    public void buyWithoutAccountTest(){
+//        addProductAndViewCart("https://fakestore.testelka.pl/product/egipt-el-gouna/");
+//        driver.findElement(checkoutButton).click();
+//        fillOutCheckoutForm("test1@testelka.pl");
+//        fillOutCardData(true);
+//        orderAndWaitToComplete();
+//        int numberOfOrderReceivedMessages = driver.findElements(By.cssSelector(".woocommerce-thankyou-order-received")).size();
+//        int expectedNumberOfMessages = 1;
+//        assertTrue(expectedNumberOfMessages == numberOfOrderReceivedMessages,
+//                "Number of 'order received' messages is not 1. Was the payment successful?");
+//    }
 
 
 

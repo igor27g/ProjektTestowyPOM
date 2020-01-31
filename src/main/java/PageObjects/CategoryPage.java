@@ -22,7 +22,7 @@ public class CategoryPage extends BasePage{
         By addToCartButton = By.cssSelector(addToCartButtonCssSelector.replace("<product_id>", productId));
         driver.findElement(addToCartButton).click();
         wait.until(ExpectedConditions.attributeContains(addToCartButton, "class", "added"));
-        return new CategoryPage(driver);
+        return this;
     }
     public CartPage viewCart() {
         wait.until(ExpectedConditions.elementToBeClickable(viewCartButtonLocator)).click();
