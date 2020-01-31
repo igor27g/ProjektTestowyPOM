@@ -7,4 +7,5 @@ public abstract class BasePage {
         this.driver = driver;
     }
 
+
 }

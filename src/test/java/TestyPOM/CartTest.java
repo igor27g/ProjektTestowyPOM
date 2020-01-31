@@ -3,6 +3,8 @@ import PageObjects.CategoryPage;
 import PageObjects.ProductPage;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -49,7 +51,6 @@ public class CartTest extends BaseTest {
     @Test
     public void addTenProductsToCartTest() {
         ProductPage productPage = new ProductPage(driver);
-        productPage.demoNotice.close();
         for(String product : productPages) {
             productPage.goTo("https://fakestore.testelka.pl/product" + product).addToCart();
         }
@@ -58,6 +59,28 @@ public class CartTest extends BaseTest {
         assertEquals(10,numberOfItems, "Number of items in the cart is not correct. Expected: 10, but was:" +
                 numberOfItems);
     }
+
+    @Test
+    public void changeNumberOfProductsTest(){
+       ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+       productPage.demoNotice.close();
+       int quantity =  productPage.addToCart().viewCart().changeQuantity(8).updateCart().getProductQuantity();
+
+        assertEquals(8, quantity,
+                "Quantity of the product is not what expected. Expected: 8, but was " + quantity);
+    }
+
+    @Test
+    public void removePositionFromCartTest(){
+        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+        productPage.demoNotice.close();
+        boolean isCarEmpty = productPage.addToCart().viewCart().removeProduct(productId).isCartEmpty();
+
+        assertTrue(isCarEmpty,
+                "Cart is not empty after removing the product");
+    }
+
+
 
 
 

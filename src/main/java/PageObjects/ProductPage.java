@@ -23,6 +23,7 @@ public class ProductPage extends BasePage{
     private By viewCartButtonLocator = By.cssSelector(".woocommerce-message>.button");
     private By productQuantityFieldLocator = By.cssSelector("input.qty");
 
+
     public ProductPage goTo(String productUrl) {
         driver.navigate().to(productUrl);
         return new ProductPage(driver);
@@ -48,4 +49,14 @@ public class ProductPage extends BasePage{
         quantityField.sendKeys(String.valueOf(quantity));
         return addToCart();
     }
+
+
+
+
+
+
+
+
+
+
 }
