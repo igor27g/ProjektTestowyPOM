@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CartTests extends BaseTest {
+
     String productId = "386";
     String productUrl = "https://fakestore.testelka.pl/product/egipt-el-gouna/";
     String categoryURL = "https://fakestore.testelka.pl/product-category/windsurfing/";

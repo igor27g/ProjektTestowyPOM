@@ -13,8 +13,6 @@ Z
 +src/main/java/PageObjects/CategoryPage.java,a\2\a25eb101cbce28bcf6ecd334c62a00e1699996fa
 W
 'src/main/java/PageObjects/CartPage.java,f\4\f41e317d8b8a240615f4bdbff86831a544c9beb3
-T
-$src/test/java/TestyPOM/CartTest.java,d\5\d5dc2a31d54c589bdf2c7c0d247aa360f4889911
 W
 'src/main/java/PageObjects/BasePage.java,9\4\948ee77aa2d574c5813f5984b7d1cc9d3e6be276
 T
