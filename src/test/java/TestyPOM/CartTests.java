@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CartTests extends BaseTest {
 
     String productId = "386";
-    String productUrl = "https://fakestore.testelka.pl/product/egipt-el-gouna/";
-    String categoryURL = "https://fakestore.testelka.pl/product-category/windsurfing/";
+    String productUrl = "/product/egipt-el-gouna/";
+    String categoryURL = "/product-category/windsurfing/";
     String[] productPages = {"/egipt-el-gouna/","/wspinaczka-via-ferraty/","/wspinaczka-island-peak/",
             "/fuerteventura-sotavento/", "/grecja-limnos/", "/windsurfing-w-karpathos/",
             "/wyspy-zielonego-przyladka-sal/", "/wakacje-z-yoga-w-kraju-kwitnacej-wisni/",
@@ -20,7 +20,7 @@ public class CartTests extends BaseTest {
 
     @Test
     public void addToCartFromProductPageTest() {
-        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
         productPage.demoNotice.close();
         boolean isProductInCart = productPage.addToCart().viewCart().isProductInCart(productId);
         assertTrue(isProductInCart,
@@ -30,7 +30,7 @@ public class CartTests extends BaseTest {
 
     @Test
     public void addToCartFromCategoryPageTest() {
-        CategoryPage categoryPage = new CategoryPage(driver).goTo(categoryURL);
+        CategoryPage categoryPage = new CategoryPage(driver).goTo(configuration.getBaseUrl() + categoryURL);
         categoryPage.demoNotice.close();
         boolean isProductInCart = categoryPage.addToCart(productId).viewCart().isProductInCart(productId);
 
@@ -41,7 +41,7 @@ public class CartTests extends BaseTest {
 
     @Test
     public void addOneProductTenTimesTest() {
-        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
         productPage.demoNotice.close();
         int productQuantity = productPage.addToCart(10).viewCart().getProductQuantity();
 
@@ -53,7 +53,7 @@ public class CartTests extends BaseTest {
     public void addTenProductsToCartTest() {
         ProductPage productPage = new ProductPage(driver);
         for(String product : productPages) {
-            productPage.goTo("https://fakestore.testelka.pl/product" + product).addToCart();
+            productPage.goTo(configuration.getBaseUrl() + "/product" + product).addToCart();
         }
         int numberOfItems = productPage.header.viewCart().getNumberOfProducts();
 
@@ -63,7 +63,7 @@ public class CartTests extends BaseTest {
 
     @Test
     public void changeNumberOfProductsTest(){
-       ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+       ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
        productPage.demoNotice.close();
        int quantity =  productPage.addToCart().viewCart().changeQuantity(8).updateCart().getProductQuantity();
 
@@ -73,28 +73,12 @@ public class CartTests extends BaseTest {
 
     @Test
     public void removePositionFromCartTest(){
-        ProductPage productPage = new ProductPage(driver).goTo(productUrl);
+        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
         productPage.demoNotice.close();
         boolean isCarEmpty = productPage.addToCart().viewCart().removeProduct(productId).isCartEmpty();
         assertTrue(isCarEmpty,
                 "Cart is not empty after removing the product");
     }
-
-
-
-//    @Test
-//    public void buyWithoutAccountTest(){
-//        addProductAndViewCart("https://fakestore.testelka.pl/product/egipt-el-gouna/");
-//        driver.findElement(checkoutButton).click();
-//        fillOutCheckoutForm("test1@testelka.pl");
-//        fillOutCardData(true);
-//        orderAndWaitToComplete();
-//        int numberOfOrderReceivedMessages = driver.findElements(By.cssSelector(".woocommerce-thankyou-order-received")).size();
-//        int expectedNumberOfMessages = 1;
-//        assertTrue(expectedNumberOfMessages == numberOfOrderReceivedMessages,
-//                "Number of 'order received' messages is not 1. Was the payment successful?");
-//    }
-
 
 
 }

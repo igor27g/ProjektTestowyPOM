@@ -1,8 +1,11 @@
 package Drivers;
 
+import Utils.ConfigurationManager;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -10,28 +13,40 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DriverFactory {
-    String hubURL = "http://localhost:4444/wd/hub";
+    private RemoteWebDriver driver;
 
-    public WebDriver create(Browser browserType) throws MalformedURLException {
-        switch (browserType) {
+
+    public WebDriver create(ConfigurationManager configuration){
+        switch (Browser.valueOf(configuration.getBrowser())) {
             case CHROME:
-                return getChromeDriver();
+                return getChromeDriver(configuration);
             case FIREFOX:
-                return getFirefoxDriver();
+                return getFirefoxDriver(configuration);
                 default:
                     throw new IllegalArgumentException("Provied browser doesn't exist");
         }
     }
 
-    private WebDriver getFirefoxDriver() throws MalformedURLException {
+    private WebDriver getFirefoxDriver(ConfigurationManager configuration) {
         FirefoxOptions options = new FirefoxOptions();
-        return new RemoteWebDriver(new URL(hubURL), options);
+        return getDriver(options, configuration);
     }
 
-    private WebDriver getChromeDriver() throws MalformedURLException {
+    private WebDriver getChromeDriver(ConfigurationManager configuration){
         ChromeOptions options = new ChromeOptions();
         options.setCapability(CapabilityType.VERSION, "79");
-        return new RemoteWebDriver(new URL(hubURL), options);
+        return getDriver(options,configuration);
+    }
+
+    private WebDriver getDriver(MutableCapabilities options, ConfigurationManager configuration) {
+        try {
+            return new RemoteWebDriver(new URL(configuration.getHubUrl()), options);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            System.out.println(e + "was thrown. HubUrl in the configuration file is incorrect or missing. " +
+                    "Check the configuration file." + configuration.getConfigurationLocation());
+        }
+        return  driver;
     }
 
 
