@@ -10,38 +10,32 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 public class CartTests extends BaseTest {
 
-    String productId = "386";
-    String productUrl = "/product/egipt-el-gouna/";
-    String categoryURL = "/product-category/windsurfing/";
-    String[] productPages = {"/egipt-el-gouna/","/wspinaczka-via-ferraty/","/wspinaczka-island-peak/",
-            "/fuerteventura-sotavento/", "/grecja-limnos/", "/windsurfing-w-karpathos/",
-            "/wyspy-zielonego-przyladka-sal/", "/wakacje-z-yoga-w-kraju-kwitnacej-wisni/",
-            "/wczasy-relaksacyjne-z-yoga-w-toskanii/", "/yoga-i-pilates-w-hiszpanii/"};
+
 
     @Test
     public void addToCartFromProductPageTest() {
-        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
+        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + testData.getProduct().getUrl());
         productPage.demoNotice.close();
-        boolean isProductInCart = productPage.addToCart().viewCart().isProductInCart(productId);
+        boolean isProductInCart = productPage.addToCart().viewCart().isProductInCart(testData.getProduct().getId());
         assertTrue(isProductInCart,
-                "Remove button was not found for a product with id=" + productId + ". " +
+                "Remove button was not found for a product with id=" + testData.getProduct().getId() + ". " +
                         "Was the product added to cart?");
     }
 
     @Test
     public void addToCartFromCategoryPageTest() {
-        CategoryPage categoryPage = new CategoryPage(driver).goTo(configuration.getBaseUrl() + categoryURL);
+        CategoryPage categoryPage = new CategoryPage(driver).goTo(configuration.getBaseUrl() + testData.getCategoryURL());
         categoryPage.demoNotice.close();
-        boolean isProductInCart = categoryPage.addToCart(productId).viewCart().isProductInCart(productId);
+        boolean isProductInCart = categoryPage.addToCart(testData.getProduct().getId()).viewCart().isProductInCart(testData.getProduct().getId());
 
         assertTrue(isProductInCart,
-                "Remove button was not found for a product with id=" + productId + ". " +
+                "Remove button was not found for a product with id=" + testData.getProduct().getId() + ". " +
                         "Was the product added to cart?");
     }
 
     @Test
     public void addOneProductTenTimesTest() {
-        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
+        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + testData.getProduct().getUrl());
         productPage.demoNotice.close();
         int productQuantity = productPage.addToCart(10).viewCart().getProductQuantity();
 
@@ -52,7 +46,7 @@ public class CartTests extends BaseTest {
     @Test
     public void addTenProductsToCartTest() {
         ProductPage productPage = new ProductPage(driver);
-        for(String product : productPages) {
+        for(String product : testData.getProductPages()) {
             productPage.goTo(configuration.getBaseUrl() + "/product" + product).addToCart();
         }
         int numberOfItems = productPage.header.viewCart().getNumberOfProducts();
@@ -62,8 +56,8 @@ public class CartTests extends BaseTest {
     }
 
     @Test
-    public void changeNumberOfProductsTest(){
-       ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
+    public void changeNumberOfProduct3sTest(){
+       ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + testData.getProduct().getUrl());
        productPage.demoNotice.close();
        int quantity =  productPage.addToCart().viewCart().changeQuantity(8).updateCart().getProductQuantity();
 
@@ -73,9 +67,9 @@ public class CartTests extends BaseTest {
 
     @Test
     public void removePositionFromCartTest(){
-        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + productUrl);
+        ProductPage productPage = new ProductPage(driver).goTo(configuration.getBaseUrl() + testData.getProduct().getUrl());
         productPage.demoNotice.close();
-        boolean isCarEmpty = productPage.addToCart().viewCart().removeProduct(productId).isCartEmpty();
+        boolean isCarEmpty = productPage.addToCart().viewCart().removeProduct(testData.getProduct().getId()).isCartEmpty();
         assertTrue(isCarEmpty,
                 "Cart is not empty after removing the product");
     }

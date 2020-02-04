@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7626ff5b-3895-48f0-a7b8-b3ffa7b0cf5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/configs/Configuration.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/ConfigurationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/FileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestData.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/ConfigurationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/ConfigurationReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestyPOM/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestyPOM/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestyPOM/CartTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestyPOM/CartTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestyPOM/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestyPOM/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestyPOM/CartTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestyPOM/CartTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,20 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/CartTests.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="-475">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="518" selection-start-line="518" selection-end-line="518" />
+            <state relative-caret-position="102">
+              <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -47,8 +51,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="222">
+              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/CartTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -56,62 +69,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="177">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Drivers/Browser.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ConfigurationReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="-186">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/configs/Configuration.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CartPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
+            <state relative-caret-position="1224">
+              <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar!/org/openqa/selenium/firefox/FirefoxOptions.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+            <state relative-caret-position="35">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ProductPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Helpers/TestStatus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ConfigurationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -154,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/TestStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestHelpers/TestStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/TestHelpers/TestStaus.java" />
         <option value="$PROJECT_DIR$/src/test/java/Helpers/TestStatusTest.java" />
@@ -188,13 +191,24 @@
         <option value="$PROJECT_DIR$/src/test/java/TestyPOM/Drivers/Browser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Drivers/Browser.java" />
         <option value="$PROJECT_DIR$/src/test/java/Configs/Configurations.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java" />
         <option value="$PROJECT_DIR$/src/configs/Configurations.properties" />
         <option value="$PROJECT_DIR$/src/configs/Configuration.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/ConfigurationManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestData.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/FileRader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/FileReder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/FileReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/ConfigurationReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestyPOM/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestyPOM/CartTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Contact.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java" />
       </list>
     </option>
   </component>
@@ -206,10 +220,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1911" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1170" />
+    <option name="x" value="175" />
+    <option name="y" value="32" />
+    <option name="width" value="1300" />
+    <option name="height" value="770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -217,8 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,6 +276,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="PageObjects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjektTestowy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjektTestowy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,16 +305,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjektTestowy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjektTestowy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="TestyPOM" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580730301286" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580816157755" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../WDP5_OA_PD3114" />
@@ -335,8 +365,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CartTests.addToCartFromProductPageTest">
-    <configuration name="CartTests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PaymentTests.buyWithoutAccount">
+    <configuration name="CartTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjektTestowy" />
       <extension name="coverage">
         <pattern>
@@ -346,16 +376,11 @@
       </extension>
       <option name="PACKAGE_NAME" value="TestyPOM" />
       <option name="MAIN_CLASS_NAME" value="TestyPOM.CartTests" />
-      <option name="METHOD_NAME" value="addToCartFromProductPageTest" />
-      <option name="TEST_OBJECT" value="uniqueId" />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:TestyPOM.CartTests]" />
-      </uniqueIds>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTests.addOneProductTenTimesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTests.addTenProductsToCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjektTestowy" />
       <extension name="coverage">
         <pattern>
@@ -365,7 +390,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="TestyPOM" />
       <option name="MAIN_CLASS_NAME" value="TestyPOM.CartTests" />
-      <option name="METHOD_NAME" value="addOneProductTenTimesTest" />
+      <option name="METHOD_NAME" value="addTenProductsToCartTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -387,7 +412,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTests.changeNumberOfProductsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTests.changeNumberOfProduct3sTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjektTestowy" />
       <extension name="coverage">
         <pattern>
@@ -397,13 +422,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="TestyPOM" />
       <option name="MAIN_CLASS_NAME" value="TestyPOM.CartTests" />
-      <option name="METHOD_NAME" value="changeNumberOfProductsTest" />
+      <option name="METHOD_NAME" value="changeNumberOfProduct3sTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTests.removePositionFromCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PaymentTests.buyWithoutAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjektTestowy" />
       <extension name="coverage">
         <pattern>
@@ -412,8 +437,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="TestyPOM" />
-      <option name="MAIN_CLASS_NAME" value="TestyPOM.CartTests" />
-      <option name="METHOD_NAME" value="removePositionFromCartTest" />
+      <option name="MAIN_CLASS_NAME" value="TestyPOM.PaymentTests" />
+      <option name="METHOD_NAME" value="buyWithoutAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -421,11 +446,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PaymentTests.buyWithoutAccount" />
+        <item itemvalue="JUnit.CartTests.changeNumberOfProduct3sTest" />
+        <item itemvalue="JUnit.CartTests.addTenProductsToCartTest" />
+        <item itemvalue="JUnit.CartTests" />
         <item itemvalue="JUnit.CartTests.addToCartFromProductPageTest" />
-        <item itemvalue="JUnit.CartTests.addOneProductTenTimesTest" />
-        <item itemvalue="JUnit.CartTests.changeNumberOfProductsTest" />
-        <item itemvalue="JUnit.CartTests.removePositionFromCartTest" />
-        <item itemvalue="JUnit.CartTests (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -443,35 +468,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CartTests_removePositionFromCartTest - 2020.02.01 at 22h 41m 55s.xml">
-      <configuration name="CartTests.removePositionFromCartTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_removePositionFromCartTest - 2020.02.01 at 23h 53m 52s.xml">
-      <configuration name="CartTests.removePositionFromCartTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_removePositionFromCartTest - 2020.02.01 at 23h 55m 50s.xml">
-      <configuration name="CartTests.removePositionFromCartTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_removePositionFromCartTest - 2020.02.03 at 12h 08m 15s.xml">
-      <configuration name="CartTests.removePositionFromCartTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_removePositionFromCartTest - 2020.02.03 at 12h 10m 07s.xml">
-      <configuration name="CartTests.removePositionFromCartTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_changeNumberOfProductsTest - 2020.02.03 at 12h 11m 16s.xml">
-      <configuration name="CartTests.changeNumberOfProductsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_changeNumberOfProductsTest - 2020.02.03 at 12h 13m 26s.xml">
-      <configuration name="CartTests.changeNumberOfProductsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_changeNumberOfProductsTest - 2020.02.03 at 12h 14m 07s.xml">
-      <configuration name="CartTests.changeNumberOfProductsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_addOneProductTenTimesTest - 2020.02.03 at 12h 44m 07s.xml">
-      <configuration name="CartTests.addOneProductTenTimesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CartTests_addToCartFromProductPageTest - 2020.02.03 at 12h 44m 58s.xml">
+    <history-entry file="CartTests_addToCartFromProductPageTest - 2020.02.04 at 12h 06m 46s.xml">
       <configuration name="CartTests.addToCartFromProductPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTests_addToCartFromProductPageTest - 2020.02.04 at 12h 07m 12s.xml">
+      <configuration name="CartTests.addToCartFromProductPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTests_addToCartFromProductPageTest - 2020.02.04 at 12h 07m 47s.xml">
+      <configuration name="CartTests.addToCartFromProductPageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTests - 2020.02.04 at 12h 09m 56s.xml">
+      <configuration name="CartTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTests_addTenProductsToCartTest - 2020.02.04 at 12h 12m 11s.xml">
+      <configuration name="CartTests.addTenProductsToCartTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTests_changeNumberOfProduct3sTest - 2020.02.04 at 12h 13m 37s.xml">
+      <configuration name="CartTests.changeNumberOfProduct3sTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PaymentTests_buyWithoutAccount - 2020.02.04 at 12h 22m 10s.xml">
+      <configuration name="PaymentTests.buyWithoutAccount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PaymentTests_buyWithoutAccount - 2020.02.04 at 12h 24m 46s.xml">
+      <configuration name="PaymentTests.buyWithoutAccount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PaymentTests_buyWithoutAccount - 2020.02.04 at 12h 25m 31s.xml">
+      <configuration name="PaymentTests.buyWithoutAccount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PaymentTests_buyWithoutAccount - 2020.02.04 at 12h 30m 58s.xml">
+      <configuration name="PaymentTests.buyWithoutAccount" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -484,10 +509,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1938" height="1170" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.15938166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882352" visible="true" weight="0.2033557" />
       <window_info id="Structure" order="1" sideWeight="0.5011765" side_tool="true" weight="0.1758509" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -496,7 +521,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22740525" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33050847" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986577" weight="0.29237288" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -646,19 +671,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java</url>
-          <line>40</line>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java</url>
-          <line>39</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/TestyPOM/CartTests.java</url>
-          <line>66</line>
+          <line>60</line>
           <properties />
           <option name="timeStamp" value="93" />
         </line-breakpoint>
@@ -710,13 +735,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ProductPage.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/PaymentMethodsTests.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/Helpers/TestStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../WDP5_OA_PD3114/src/zad1/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -781,27 +799,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CartPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Configs/properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Configs/properties.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/StareTesty/CartTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -816,17 +814,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="518" selection-start-line="518" selection-end-line="518" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ProductPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="519" selection-start-line="519" selection-end-line="519" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -837,17 +856,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="238">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ConfigurationManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        <state relative-caret-position="697">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
@@ -858,24 +877,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestData.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="46" column="94" selection-start-line="46" selection-start-column="94" selection-end-line="46" selection-end-column="94" />
+        <state relative-caret-position="68">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/PaymentTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Helpers/TestStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CartPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ConfigurationReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="177">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestyPOM/CartTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="544">
+          <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
         </state>
       </provider>
     </entry>

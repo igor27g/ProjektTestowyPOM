@@ -1,11 +1,10 @@
 package Drivers;
 
-import Utils.ConfigurationManager;
+import Utils.ConfigurationReader;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -16,7 +15,7 @@ public class DriverFactory {
     private RemoteWebDriver driver;
 
 
-    public WebDriver create(ConfigurationManager configuration){
+    public WebDriver create(ConfigurationReader configuration){
         switch (Browser.valueOf(configuration.getBrowser())) {
             case CHROME:
                 return getChromeDriver(configuration);
@@ -27,18 +26,18 @@ public class DriverFactory {
         }
     }
 
-    private WebDriver getFirefoxDriver(ConfigurationManager configuration) {
+    private WebDriver getFirefoxDriver(ConfigurationReader configuration) {
         FirefoxOptions options = new FirefoxOptions();
         return getDriver(options, configuration);
     }
 
-    private WebDriver getChromeDriver(ConfigurationManager configuration){
+    private WebDriver getChromeDriver(ConfigurationReader configuration){
         ChromeOptions options = new ChromeOptions();
         options.setCapability(CapabilityType.VERSION, "79");
         return getDriver(options,configuration);
     }
 
-    private WebDriver getDriver(MutableCapabilities options, ConfigurationManager configuration) {
+    private WebDriver getDriver(MutableCapabilities options, ConfigurationReader configuration) {
         try {
             return new RemoteWebDriver(new URL(configuration.getHubUrl()), options);
         } catch (MalformedURLException e) {
