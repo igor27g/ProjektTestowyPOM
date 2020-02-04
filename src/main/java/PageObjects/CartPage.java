@@ -2,8 +2,7 @@ package PageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,14 +19,24 @@ public class CartPage extends BasePage{
         wait = new WebDriverWait(driver,7);
     }
 
-    //@FindBy(how = How.CSS, using = "form>.shop_table"); //drugi sposob
-    @FindBy(css = "form>.shop_table") private WebElement shopTable;
-    @FindBy(css = "form>.shop_table") private List<WebElement> shopTables;
-    @FindBy(css= "div.quantity>input") private WebElement productQuantityField;
-    @FindBy(css = ".cart_item") private List<WebElement> cartItems;
-    @FindBy(css = "[name='update_cart']") private WebElement updateCartButton;
+    @FindBys({                                 // to dziala jak taki lancuch
+           @FindBy(tagName = "form") ,         // wyszukaj mi elementow o tagu form
+           @FindBy(className = "shop_table")  // i w tych elementach, wyszukaj pod nimi, ktorymi klasa jest shop_table. To musi byc dziecko
+                                              // to moze byc duzo glebiej niz na poziomie dziecko, po prostu co kolwiek tam jest
+                                             // to jest rownoznacznie z form .shop_table (szukanie potomka)
+    })
+//    @FindAll({
+//            @FindBy(tagName = "form"),         //FindAll znajduje wszystkie elementy, ktore spelniaja jeden z podanych warunkow
+//            @FindBy(className = "shop_table")  // Zwroci wszystkie elementy, ktore maja tag form i maja klase shop_table 
+//    })
+    @CacheLookup private WebElement shopTable;
+    //@FindBy(how = How.CSS, using = "form>.shop_table"); //drugi sposob szukania selektorow
+    //@FindBy(css = "form>.shop_table") @CacheLookup private List<WebElement> shopTables;
+    @FindBy(css= "div.quantity>input") @CacheLookup private WebElement productQuantityField;
+    @FindBy(css = ".cart_item") @CacheLookup private List<WebElement> cartItems;
+    @FindBy(css = "[name='update_cart']") @CacheLookup private WebElement updateCartButton;
     private By loaderLocator = By.cssSelector(".blockOverlay");
-    @FindBy(css = ".checkout-button") private WebElement checkoutButton;
+    @FindBy(css = ".checkout-button") @CacheLookup private WebElement checkoutButton;
 
     private String removeProductButtonCssSelector = "a[data-product_id='<product_id>']";
 
