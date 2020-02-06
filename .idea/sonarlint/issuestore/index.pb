@@ -17,3 +17,41 @@ W
 'src/main/java/PageObjects/BasePage.java,9\4\948ee77aa2d574c5813f5984b7d1cc9d3e6be276
 T
 $src/test/java/TestyPOM/BaseTest.java,b\a\bad87efeba15137edde85920c0f297318bf53c56
+Q
+!src/main/java/Utils/Customer.java,4\c\4cf7bf06ce76691205eb1ab7e0f32c68cf5f339c
+P
+ src/main/java/Utils/Address.java,d\a\da5f257c932065ba0fb92a33b40ea34fd8de1c90
+M
+src/main/java/Utils/Card.java,a\0\a063c8307ebf1336376f19535ebb93ac2772aed7
+P
+ src/main/java/Utils/Contact.java,c\7\c76a8045206996590a944a785b2394e7e64d674f
+W
+'src/main/java/Utils/TestDataReader.java,7\a\7a0ec72b5f8d9c44078ccbe7bd31cf5987258af5
+Q
+!src/test/java/TestData.properties,f\1\f1a11c0ae83ad249b995f8e3a8d1cffa3992e1d6
+P
+ src/main/java/Utils/Product.java,5\7\57bca6bc60d70abce7220da814ecd5a85ad9d92c
+X
+(src/test/java/TestyPOM/PaymentTests.java,d\6\d609bafd58d9ee5d20778072a01ccde1c97fa643
+T
+$src/configs/Configuration.properties,b\0\b0aa617ffd070f1eab60eca7e0832a7a63f131d7
+X
+(src/main/java/Drivers/DriverFactory.java,2\9\2965e3ce0679043c79a6ab1e15aa467d798047ba
+R
+"src/main/java/Drivers/Browser.java,6\7\67d40f7323dda333f46b7b06934a9399f36ed390
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+\
+,src/main/java/Utils/ConfigurationReader.java,c\6\c6ce4c3fcbe82d2b69f1e231874f9d3917b80dfc
+S
+#src/main/java/Utils/FileReader.java,8\d\8dce476087b5007d555c70d31ea8e27818786ab4
+U
+%src/test/java/TestyPOM/CartTests.java,3\2\32eae45e7228e724cdec7e2e261b0b00fa565eb0
+[
++src/main/java/PageObjects/CheckoutPage.java,b\b\bb2d3ac73a24756ba3d31ab0be53e543237e44f4
+]
+-src/main/java/PageObjects/DemoFooterPage.java,2\5\25b1d1e7ea4fdb96383b3b2203dea41620d22b24
+Y
+)src/main/java/PageObjects/HeaderPage.java,4\a\4ae71b398bd73ad2bfcb5d065f80a347ba4c3dc5
+`
+0src/main/java/PageObjects/OrderReceivedPage.java,3\c\3c0a2ed23fa5ea2627ff24f99f8c379839eb1350

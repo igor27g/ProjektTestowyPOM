@@ -19,19 +19,19 @@ public class CartPage extends BasePage{
         wait = new WebDriverWait(driver,7);
     }
 
-    @FindBys({                                 // to dziala jak taki lancuch
-           @FindBy(tagName = "form") ,         // wyszukaj mi elementow o tagu form
-           @FindBy(className = "shop_table")  // i w tych elementach, wyszukaj pod nimi, ktorymi klasa jest shop_table. To musi byc dziecko
-                                              // to moze byc duzo glebiej niz na poziomie dziecko, po prostu co kolwiek tam jest
-                                             // to jest rownoznacznie z form .shop_table (szukanie potomka)
-    })
+//    @FindBys({                                 // to dziala jak taki lancuch
+//           @FindBy(tagName = "form") ,         // wyszukaj mi elementow o tagu form
+//           @FindBy(className = "shop_table")  // i w tych elementach, wyszukaj pod nimi, ktorymi klasa jest shop_table. To musi byc dziecko
+//                                              // to moze byc duzo glebiej niz na poziomie dziecko, po prostu co kolwiek tam jest
+//                                             // to jest rownoznacznie z form .shop_table (szukanie potomka)
+//    })
 //    @FindAll({
 //            @FindBy(tagName = "form"),         //FindAll znajduje wszystkie elementy, ktore spelniaja jeden z podanych warunkow
-//            @FindBy(className = "shop_table")  // Zwroci wszystkie elementy, ktore maja tag form i maja klase shop_table 
+//            @FindBy(className = "shop_table")  // Zwroci wszystkie elementy, ktore maja tag form i maja klase shop_table
 //    })
-    @CacheLookup private WebElement shopTable;
+
     //@FindBy(how = How.CSS, using = "form>.shop_table"); //drugi sposob szukania selektorow
-    //@FindBy(css = "form>.shop_table") @CacheLookup private List<WebElement> shopTables;
+    @FindBy(css = "form>.shop_table") @CacheLookup private List<WebElement> shopTables;
     @FindBy(css= "div.quantity>input") @CacheLookup private WebElement productQuantityField;
     @FindBy(css = ".cart_item") @CacheLookup private List<WebElement> cartItems;
     @FindBy(css = "[name='update_cart']") @CacheLookup private WebElement updateCartButton;
@@ -93,7 +93,7 @@ public class CartPage extends BasePage{
 
     private void waitForShopTable() {
         WebDriverWait wait = new WebDriverWait(driver, 7);
-        wait.until(ExpectedConditions.visibilityOf(shopTable));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(loaderLocator));
     }
 
     public boolean isCartEmpty() {
