@@ -1,6 +1,6 @@
 
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–á‹Ãşÿÿÿÿ
-Zsquid:HiddenFieldCheck…"8Rename "wait" which hides the field declared at line 13.(áµ£$
 „"squid:ClassVariableVisibilityCheck"VMake demoNotice a static final constant or non-public and provide accessors if needed.(®µ 
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–á‹Ãşÿÿÿÿ
 wsquid:S1488Œ"_Immediately return this expression instead of assigning it to the temporary variable "element".(ŞëÕÓ
+Zsquid:HiddenFieldCheck…"8Rename "wait" which hides the field declared at line 13.(áµ£$
 €"squid:ClassVariableVisibilityCheck"RMake header a static final constant or non-public and provide accessors if needed.(¬‚˜ù

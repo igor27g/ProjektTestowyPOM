@@ -1,5 +1,5 @@
 
 €"squid:ClassVariableVisibilityCheck
 "RMake header a static final constant or non-public and provide accessors if needed.(¬‚˜ù
-„"squid:ClassVariableVisibilityCheck"VMake demoNotice a static final constant or non-public and provide accessors if needed.(®µ 
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–á‹Ãşÿÿÿÿ
+„"squid:ClassVariableVisibilityCheck"VMake demoNotice a static final constant or non-public and provide accessors if needed.(®µ 

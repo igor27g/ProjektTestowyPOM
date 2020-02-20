@@ -1,5 +1,5 @@
 
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–á‹Ãþÿÿÿÿ
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(²Ú¸”8¥Ô“‚.
-asquid:HiddenFieldCheck_"8Rename "wait" which hides the field declared at line 14.(³ˆ§¦8ê×îÿ€.
 Œ"squid:ClassVariableVisibilityCheck"RMake footer a static final constant or non-public and provide accessors if needed.(Øü›ðüÿÿÿÿ8ê×îÿ€.
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(²Ú¸”8¥Ô“‚.
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–á‹Ãþÿÿÿÿ
+asquid:HiddenFieldCheck^"8Rename "wait" which hides the field declared at line 14.(³ˆ§¦8ê×îÿ€.

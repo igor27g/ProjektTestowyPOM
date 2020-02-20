@@ -1,12 +1,6 @@
 
-a
-1src/test/java/StareTesty/PaymentMethodsTests.java,6\3\63e0e7728ac4c37539881d4a2f2dcc3a2d3173fd
-Z
-*src/test/java/StareTesty/PaymentTests.java,5\6\568b9ce343f298538a3cedb4c20ebc949da3791f
 U
 %src/test/java/Helpers/TestStatus.java,2\6\26125465f7c033ae3f60641c9d4d4339d6304865
-W
-'src/test/java/StareTesty/CartTests.java,c\4\c4093850ef1e99c00ab3631661ec95369dad2400
 Z
 *src/main/java/PageObjects/ProductPage.java,0\d\0dc7f5eca0d2103e5c04b08090cab0fbfeec3226
 [

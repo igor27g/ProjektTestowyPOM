@@ -63,7 +63,6 @@ public class CartPage extends BasePage{
     public int getNumberOfProducts() {
         waitForShopTable();
         return cartItems.size();
-
     }
 
     public CartPage changeQuantity(int quantity) {
